@@ -4,21 +4,17 @@
 
 SourceLedger is a production-shaped RAG runtime: hybrid retrieval, evidence packing with validated citations, prompt-injection guards, resilience policies, PostgreSQL checkpoints and a six-tab operational console in one runnable system.
 
-<!--
-DEMO VIDEO -- enable after recording (see 演示视频_拍摄脚本.md)
-
-1. Record the 2-minute walkthrough and export the mp4.
-2. Drag the mp4 into a GitHub issue comment box; GitHub returns a
-   https://github.com/user-attachments/assets/... URL.
-3. Uncomment the block below, paste that URL, commit.
-
 ## Demo
 
-[![SourceLedger walkthrough](docs/demo/cover.png)](PASTE_VIDEO_URL_HERE)
+![SourceLedger Ops Console walkthrough](docs/demo/walkthrough.gif)
 
-> 2-minute walkthrough: hybrid retrieval, citations, context packing, resilience policies,
-> security boundary and run state. Tab-by-tab clips live in `docs/demo/`.
--->
+Every frame above is a real request against the local runtime: a grounded answer with `[C1]`
+citations, a Vector / BM25 / RRF comparison, an evidence pack under a token budget, retry and
+fallback policies, an injection attempt blocked, and a PostgreSQL checkpoint recovery.
+
+Per-tab clips: [Query](docs/demo/query.gif) | [Retrieval](docs/demo/retrieval.gif) | [Context](docs/demo/context.gif) | [Resilience](docs/demo/resilience.gif) | [Security](docs/demo/security.gif) | [Runtime](docs/demo/runtime.gif)
+
+Full-page captures: [Query](docs/demo/query-full.png) | [Retrieval](docs/demo/retrieval-full.png) | [Context](docs/demo/context-full.png) | [Resilience](docs/demo/resilience-full.png) | [Security](docs/demo/security-full.png) | [Runtime](docs/demo/runtime-full.png)
 
 ## Review This Repo In 3 Minutes
 

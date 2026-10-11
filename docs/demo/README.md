@@ -1,22 +1,31 @@
 ﻿# docs/demo
 
-Walkthrough media for the root README.
+Recorded walkthrough of the Ops Console. Every clip is a real session against a locally
+running stack: real API calls, real PostgreSQL checkpoints, real Redis locks.
 
 ```text
-cover.png        video cover / first frame
-query.gif        Query tab, 6-10s
-retrieval.gif    Retrieval tab, 6-10s
-context.gif      Context tab, 6-10s
-resilience.gif   Resilience tab, 6-10s
-security.gif     Security tab, 6-10s
-runtime.gif      Runtime tab, 6-10s
+walkthrough.gif   all six tabs in order, with title cards
+cover.png         still used as a link preview
+
+query.gif         grounded answer, [C1] citations, token usage, run trace
+retrieval.gif     Vector vs BM25 vs RRF candidates with rank and score
+context.gif       dedup, token budget, evidence pack, citations
+resilience.gif    retry, fallback, breaker, rate limit, lock, idempotency
+security.gif      injection blocked, no-evidence abstention
+runtime.gif       checkpoint recovery and run state
+
+*-full.png        full-page captures of each tab with results loaded
 ```
 
-Recording checklist:
+How these were produced:
 
-1. Start PostgreSQL, Redis, the FastAPI app and `npm run dev`.
-2. Hide anything private (API keys, chat apps, bookmarks). Browser to 110-125% zoom, F11.
-3. Record 6-10 seconds per tab with ScreenToGif, export as GIF.
-4. Record one 2-3 minute pass with Xbox Game Bar (Win + Alt + R) for the mp4.
-5. Upload the mp4 to a GitHub issue comment to get a user-attachments URL, then paste it
-   into the README demo block.
+```text
+1. Start PostgreSQL, Redis, the FastAPI app and the Vite dev server.
+2. Index the demo PDFs through POST /documents/upload.
+3. Drive a headless browser over the DevTools protocol: click each tab, run its real
+   capability, and capture frames while the request is in flight.
+4. Drop near-identical frames, sample evenly, and assemble GIFs.
+```
+
+To re-record, start the stack from the repository root (see Quick Start in the root README)
+and repeat step 3 with the same tab order.
