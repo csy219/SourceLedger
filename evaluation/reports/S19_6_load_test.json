@@ -1,0 +1,178 @@
+{
+  "summary": {
+    "requests": 20,
+    "concurrency": 5,
+    "successful": 20,
+    "failed": 0,
+    "latency_ms_avg": 161.68,
+    "latency_ms_p50": 120.01,
+    "latency_ms_p95": 281.78,
+    "latency_ms_max": 343.76,
+    "context_tokens_total": 2400,
+    "context_tokens_avg": 120,
+    "estimated_input_cost_usd": 0.0,
+    "all_passed": true
+  },
+  "results": [
+    {
+      "index": 0,
+      "status_code": 200,
+      "latency_ms": 343.76,
+      "context_tokens_est": 120,
+      "answer": "文档加载、文本分块、向量化、入库、检索和生成回答。",
+      "error": ""
+    },
+    {
+      "index": 1,
+      "status_code": 200,
+      "latency_ms": 277.42,
+      "context_tokens_est": 120,
+      "answer": "文档加载、文本分块、向量化、入库、检索和生成回答。",
+      "error": ""
+    },
+    {
+      "index": 2,
+      "status_code": 200,
+      "latency_ms": 279.96,
+      "context_tokens_est": 120,
+      "answer": "文档加载、文本分块、向量化、入库、检索和生成回答。",
+      "error": ""
+    },
+    {
+      "index": 3,
+      "status_code": 200,
+      "latency_ms": 281.78,
+      "context_tokens_est": 120,
+      "answer": "文档加载、文本分块、向量化、入库、检索和生成回答。",
+      "error": ""
+    },
+    {
+      "index": 4,
+      "status_code": 200,
+      "latency_ms": 276.37,
+      "context_tokens_est": 120,
+      "answer": "文档加载、文本分块、向量化、入库、检索和生成回答。",
+      "error": ""
+    },
+    {
+      "index": 5,
+      "status_code": 200,
+      "latency_ms": 106.56,
+      "context_tokens_est": 120,
+      "answer": "文档加载、文本分块、向量化、入库、检索和生成回答。",
+      "error": ""
+    },
+    {
+      "index": 6,
+      "status_code": 200,
+      "latency_ms": 120.01,
+      "context_tokens_est": 120,
+      "answer": "文档加载、文本分块、向量化、入库、检索和生成回答。",
+      "error": ""
+    },
+    {
+      "index": 7,
+      "status_code": 200,
+      "latency_ms": 122.01,
+      "context_tokens_est": 120,
+      "answer": "文档加载、文本分块、向量化、入库、检索和生成回答。",
+      "error": ""
+    },
+    {
+      "index": 8,
+      "status_code": 200,
+      "latency_ms": 118.73,
+      "context_tokens_est": 120,
+      "answer": "文档加载、文本分块、向量化、入库、检索和生成回答。",
+      "error": ""
+    },
+    {
+      "index": 9,
+      "status_code": 200,
+      "latency_ms": 112.89,
+      "context_tokens_est": 120,
+      "answer": "文档加载、文本分块、向量化、入库、检索和生成回答。",
+      "error": ""
+    },
+    {
+      "index": 10,
+      "status_code": 200,
+      "latency_ms": 118.4,
+      "context_tokens_est": 120,
+      "answer": "文档加载、文本分块、向量化、入库、检索和生成回答。",
+      "error": ""
+    },
+    {
+      "index": 11,
+      "status_code": 200,
+      "latency_ms": 125.94,
+      "context_tokens_est": 120,
+      "answer": "文档加载、文本分块、向量化、入库、检索和生成回答。",
+      "error": ""
+    },
+    {
+      "index": 12,
+      "status_code": 200,
+      "latency_ms": 119.1,
+      "context_tokens_est": 120,
+      "answer": "文档加载、文本分块、向量化、入库、检索和生成回答。",
+      "error": ""
+    },
+    {
+      "index": 13,
+      "status_code": 200,
+      "latency_ms": 114.2,
+      "context_tokens_est": 120,
+      "answer": "文档加载、文本分块、向量化、入库、检索和生成回答。",
+      "error": ""
+    },
+    {
+      "index": 14,
+      "status_code": 200,
+      "latency_ms": 120.56,
+      "context_tokens_est": 120,
+      "answer": "文档加载、文本分块、向量化、入库、检索和生成回答。",
+      "error": ""
+    },
+    {
+      "index": 15,
+      "status_code": 200,
+      "latency_ms": 119.23,
+      "context_tokens_est": 120,
+      "answer": "文档加载、文本分块、向量化、入库、检索和生成回答。",
+      "error": ""
+    },
+    {
+      "index": 16,
+      "status_code": 200,
+      "latency_ms": 119.65,
+      "context_tokens_est": 120,
+      "answer": "文档加载、文本分块、向量化、入库、检索和生成回答。",
+      "error": ""
+    },
+    {
+      "index": 17,
+      "status_code": 200,
+      "latency_ms": 120.05,
+      "context_tokens_est": 120,
+      "answer": "文档加载、文本分块、向量化、入库、检索和生成回答。",
+      "error": ""
+    },
+    {
+      "index": 18,
+      "status_code": 200,
+      "latency_ms": 123.23,
+      "context_tokens_est": 120,
+      "answer": "文档加载、文本分块、向量化、入库、检索和生成回答。",
+      "error": ""
+    },
+    {
+      "index": 19,
+      "status_code": 200,
+      "latency_ms": 113.78,
+      "context_tokens_est": 120,
+      "answer": "文档加载、文本分块、向量化、入库、检索和生成回答。",
+      "error": ""
+    }
+  ]
+}

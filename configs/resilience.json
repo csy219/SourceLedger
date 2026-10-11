@@ -1,0 +1,139 @@
+{
+  "operations": {
+    "model": {
+      "timeout": {
+        "timeout_ms": 30000
+      },
+      "retry": {
+        "max_attempts": 3,
+        "base_delay_ms": 500,
+        "max_delay_ms": 8000,
+        "jitter_ratio": 0.2
+      },
+      "fallback": {
+        "chain": [
+          "cached_response",
+          "smaller_model"
+        ]
+      },
+      "rate_limit": {
+        "enabled": false,
+        "limit": 100,
+        "window_seconds": 60,
+        "key_template": "user:{user_id}:model"
+      },
+      "idempotency": {
+        "enabled": false,
+        "key_template": "model:{request_id}",
+        "ttl_seconds": 3600
+      }
+    },
+    "retrieval": {
+      "timeout": {
+        "timeout_ms": 5000
+      },
+      "retry": {
+        "max_attempts": 2,
+        "base_delay_ms": 200,
+        "max_delay_ms": 2000,
+        "jitter_ratio": 0.1
+      },
+      "fallback": {
+        "chain": [
+          "bm25_only",
+          "cached_retrieval"
+        ]
+      },
+      "rate_limit": {
+        "enabled": false,
+        "limit": 200,
+        "window_seconds": 60,
+        "key_template": "user:{user_id}:retrieval"
+      },
+      "idempotency": {
+        "enabled": true,
+        "key_template": "retrieval:{query_hash}",
+        "ttl_seconds": 300
+      }
+    },
+    "tool": {
+      "timeout": {
+        "timeout_ms": 10000
+      },
+      "retry": {
+        "max_attempts": 3,
+        "base_delay_ms": 250,
+        "max_delay_ms": 5000,
+        "jitter_ratio": 0.2
+      },
+      "fallback": {
+        "chain": []
+      },
+      "rate_limit": {
+        "enabled": true,
+        "limit": 30,
+        "window_seconds": 60,
+        "key_template": "tool:{tool_name}"
+      },
+      "idempotency": {
+        "enabled": true,
+        "key_template": "tool:{run_id}:{tool_call_id}",
+        "ttl_seconds": 86400
+      }
+    },
+    "redis": {
+      "timeout": {
+        "timeout_ms": 1000
+      },
+      "retry": {
+        "max_attempts": 2,
+        "base_delay_ms": 50,
+        "max_delay_ms": 500,
+        "jitter_ratio": 0.1
+      },
+      "fallback": {
+        "chain": [
+          "local_cache"
+        ]
+      },
+      "rate_limit": {
+        "enabled": false,
+        "limit": 1000,
+        "window_seconds": 60,
+        "key_template": "redis:{operation}"
+      },
+      "idempotency": {
+        "enabled": false,
+        "key_template": "redis:{request_id}",
+        "ttl_seconds": 60
+      }
+    },
+    "webhook": {
+      "timeout": {
+        "timeout_ms": 5000
+      },
+      "retry": {
+        "max_attempts": 2,
+        "base_delay_ms": 500,
+        "max_delay_ms": 5000,
+        "jitter_ratio": 0.1
+      },
+      "fallback": {
+        "chain": [
+          "dead_letter_queue"
+        ]
+      },
+      "rate_limit": {
+        "enabled": true,
+        "limit": 100,
+        "window_seconds": 60,
+        "key_template": "webhook:{source}"
+      },
+      "idempotency": {
+        "enabled": true,
+        "key_template": "webhook:{event_id}",
+        "ttl_seconds": 604800
+      }
+    }
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "core_table": {
+    "retrieval_passed": {
+      "fixed": 45,
+      "structure": 44,
+      "semantic": 45,
+      "parent_child": 45,
+      "parent_child_vs_fixed": 0,
+      "parent_child_vs_structure": 1,
+      "parent_child_vs_semantic": 0
+    },
+    "retrieval_accuracy": {
+      "fixed": 0.9783,
+      "structure": 0.9565,
+      "semantic": 0.9783,
+      "parent_child": 0.9783,
+      "parent_child_vs_fixed": 0.0,
+      "parent_child_vs_structure": 0.0218,
+      "parent_child_vs_semantic": 0.0
+    },
+    "hit_at_1": {
+      "fixed": 0.9048,
+      "structure": 0.9762,
+      "semantic": 0.9286,
+      "parent_child": 0.9286,
+      "parent_child_vs_fixed": 0.0238,
+      "parent_child_vs_structure": -0.0476,
+      "parent_child_vs_semantic": 0.0
+    },
+    "hit_at_metric_k": {
+      "fixed": 0.9762,
+      "structure": 1.0,
+      "semantic": 1.0,
+      "parent_child": 1.0,
+      "parent_child_vs_fixed": 0.0238,
+      "parent_child_vs_structure": 0.0,
+      "parent_child_vs_semantic": 0.0
+    },
+    "recall_at_metric_k": {
+      "fixed": 0.963,
+      "structure": 0.963,
+      "semantic": 0.9815,
+      "parent_child": 0.9815,
+      "parent_child_vs_fixed": 0.0185,
+      "parent_child_vs_structure": 0.0185,
+      "parent_child_vs_semantic": 0.0
+    },
+    "mrr": {
+      "fixed": 0.9306,
+      "structure": 0.9841,
+      "semantic": 0.9563,
+      "parent_child": 0.9563,
+      "parent_child_vs_fixed": 0.0257,
+      "parent_child_vs_structure": -0.0278,
+      "parent_child_vs_semantic": 0.0
+    },
+    "latency_ms_avg": {
+      "fixed": 18.21,
+      "structure": 19.54,
+      "semantic": 19.31,
+      "parent_child": 20.25,
+      "parent_child_vs_fixed": 2.04,
+      "parent_child_vs_structure": 0.71,
+      "parent_child_vs_semantic": 0.94
+    }
+  },
+  "context_table": {
+    "parent_occurrences_avg": 4,
+    "unique_parents_avg": 3.04,
+    "context_chars_avg": 729.5,
+    "context_chars_max": 1140,
+    "context_tokens_est_avg": 364.22
+  },
+  "case_comparison": {
+    "parent_child_vs_fixed": {
+      "improved": [],
+      "regressed": [],
+      "both_failed": [
+        {
+          "id": "E33",
+          "category": "multi_doc",
+          "baseline_ranks": [
+            null,
+            null
+          ],
+          "candidate_ranks": [
+            1,
+            null
+          ]
+        }
+      ]
+    },
+    "parent_child_vs_structure": {
+      "improved": [
+        {
+          "id": "E32",
+          "category": "cross_page",
+          "baseline_ranks": [
+            1,
+            null
+          ],
+          "candidate_ranks": [
+            1,
+            4
+          ]
+        }
+      ],
+      "regressed": [],
+      "both_failed": [
+        {
+          "id": "E33",
+          "category": "multi_doc",
+          "baseline_ranks": [
+            1,
+            null
+          ],
+          "candidate_ranks": [
+            1,
+            null
+          ]
+        }
+      ]
+    },
+    "parent_child_vs_semantic": {
+      "improved": [],
+      "regressed": [],
+      "both_failed": [
+        {
+          "id": "E33",
+          "category": "multi_doc",
+          "baseline_ranks": [
+            1,
+            null
+          ],
+          "candidate_ranks": [
+            1,
+            null
+          ]
+        }
+      ]
+    }
+  }
+}

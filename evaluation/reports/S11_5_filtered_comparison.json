@@ -1,0 +1,105 @@
+{
+  "summary_table": {
+    "retrieval_passed": {
+      "s09_rrf": 45,
+      "s11_filtered": 45,
+      "delta": 0
+    },
+    "retrieval_accuracy": {
+      "s09_rrf": 0.9783,
+      "s11_filtered": 0.9783,
+      "delta": 0.0
+    },
+    "hit_at_1": {
+      "s09_rrf": 0.9762,
+      "s11_filtered": 0.9762,
+      "delta": 0.0
+    },
+    "hit_at_metric_k": {
+      "s09_rrf": 1.0,
+      "s11_filtered": 1.0,
+      "delta": 0.0
+    },
+    "recall_at_metric_k": {
+      "s09_rrf": 0.9815,
+      "s11_filtered": 0.9815,
+      "delta": 0.0
+    },
+    "mrr": {
+      "s09_rrf": 0.9881,
+      "s11_filtered": 0.9881,
+      "delta": 0.0
+    },
+    "latency_ms_avg": {
+      "s09_rrf": 22.33,
+      "s11_filtered": 26.23,
+      "delta": 3.9
+    }
+  },
+  "filter_config": {
+    "retrieval": "metadata_filter_rrf",
+    "candidate_k": 10,
+    "metric_k": 4,
+    "distance_threshold": 0.5,
+    "rrf_k": 60,
+    "filter_applied_count": 16,
+    "filter_fallback_count": 0,
+    "filter_reasons": {
+      "explicit_source": 11,
+      "none": 28,
+      "multi_source": 2,
+      "travel_without_version": 3,
+      "comparison": 2
+    }
+  },
+  "case_comparison": {
+    "improved": [],
+    "regressed": [],
+    "both_failed": [
+      {
+        "id": "E33",
+        "category": "multi_doc",
+        "base_ranks": [
+          1,
+          null
+        ],
+        "filtered_ranks": [
+          1,
+          null
+        ],
+        "filter": {
+          "sources": [],
+          "reason": "multi_source",
+          "applied": false,
+          "fallback": false
+        }
+      }
+    ],
+    "top1_changed": [
+      {
+        "id": "E40",
+        "category": "unanswerable",
+        "base_ranks": [],
+        "filtered_ranks": [],
+        "filter": {
+          "sources": [
+            "Agent平台需求说明.pdf"
+          ],
+          "reason": "explicit_source",
+          "applied": true,
+          "fallback": false
+        },
+        "base_top1": [
+          "AI应用开发知识手册.pdf",
+          9
+        ],
+        "filtered_top1": [
+          "Agent平台需求说明.pdf",
+          1
+        ]
+      }
+    ],
+    "filtered_rank_changed": []
+  },
+  "selected_variant": "s11_filtered"
+}

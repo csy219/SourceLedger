@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "scenarios": 4,
+    "passed": 4,
+    "failed": 0,
+    "all_passed": true
+  },
+  "results": [
+    {
+      "name": "timeout_retry_backoff",
+      "module": "runtime.resilience.S17_2_executor_smoke",
+      "return_code": 0,
+      "elapsed_ms": 423.47,
+      "missing_tokens": [],
+      "passed": true,
+      "stdout": "{\n  \"success_value\": \"ok\",\n  \"success_attempts\": 3,\n  \"success_elapsed_ms\": 17.55,\n  \"timeout_error\": \"OperationTimeout\",\n  \"retry_error\": \"RetryExhausted:2\",\n  \"non_retryable_error\": \"NonRetryableOperationError\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "fallback_circuit_breaker",
+      "module": "runtime.resilience.S17_3_fallback_breaker_smoke",
+      "return_code": 0,
+      "elapsed_ms": 240.51,
+      "missing_tokens": [],
+      "passed": true,
+      "stdout": "{\n  \"fallback_source\": \"bm25_only\",\n  \"fallback_attempts\": [\n    {\n      \"source\": \"primary\",\n      \"error\": \"primary unavailable\"\n    }\n  ],\n  \"fallback_exhausted\": \"FallbackExhausted\",\n  \"breaker_open_state\": \"open\",\n  \"breaker_open_error\": \"CircuitOpenError\",\n  \"breaker_recovered\": \"recovered\",\n  \"breaker_recovered_state\": \"closed\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "rate_limit_distributed_lock",
+      "module": "runtime.resilience.S17_4_rate_limit_lock_smoke",
+      "return_code": 0,
+      "elapsed_ms": 653.88,
+      "missing_tokens": [],
+      "passed": true,
+      "stdout": "{\n  \"local_rate_limit\": [\n    true,\n    true,\n    false\n  ],\n  \"redis_rate_limit\": [\n    true,\n    true,\n    false\n  ],\n  \"first_lock_acquired\": true,\n  \"second_lock_acquired_while_held\": false,\n  \"first_lock_released\": true,\n  \"second_lock_acquired_after_release\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "request_tool_idempotency",
+      "module": "runtime.resilience.S17_5_idempotency_smoke",
+      "return_code": 0,
+      "elapsed_ms": 1471.63,
+      "missing_tokens": [],
+      "passed": true,
+      "stdout": "{\n  \"request_first_replayed\": false,\n  \"request_second_replayed\": true,\n  \"request_call_count\": 1,\n  \"request_value\": {\n    \"result\": \"request-ok\",\n    \"call\": 1\n  },\n  \"tool_first_replayed\": false,\n  \"tool_second_replayed\": true,\n  \"tool_call_count\": 1,\n  \"tool_value\": {\n    \"exit_code\": 0,\n    \"call\": 1\n  }\n}\n",
+      "stderr": ""
+    }
+  ]
+}

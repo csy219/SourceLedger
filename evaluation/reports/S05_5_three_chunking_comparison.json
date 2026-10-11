@@ -1,0 +1,127 @@
+{
+  "reports": {
+    "fixed": "C:\\Users\\ASUS\\Desktop\\agent-learningstage1\\project_a\\evaluation\\reports\\fixed_chunk_baseline.json",
+    "structure": "C:\\Users\\ASUS\\Desktop\\agent-learningstage1\\project_a\\evaluation\\reports\\structure_chunk_baseline.json",
+    "semantic": "C:\\Users\\ASUS\\Desktop\\agent-learningstage1\\project_a\\evaluation\\reports\\semantic_chunk_baseline.json"
+  },
+  "summary_table": {
+    "retrieval_passed": {
+      "fixed": 45,
+      "structure": 44,
+      "semantic": 45,
+      "semantic_vs_fixed": 0,
+      "semantic_vs_structure": 1
+    },
+    "retrieval_accuracy": {
+      "fixed": 0.9783,
+      "structure": 0.9565,
+      "semantic": 0.9783,
+      "semantic_vs_fixed": 0.0,
+      "semantic_vs_structure": 0.0218
+    },
+    "hit_at_1": {
+      "fixed": 0.9048,
+      "structure": 0.9762,
+      "semantic": 0.9286,
+      "semantic_vs_fixed": 0.0238,
+      "semantic_vs_structure": -0.0476
+    },
+    "hit_at_metric_k": {
+      "fixed": 0.9762,
+      "structure": 1.0,
+      "semantic": 1.0,
+      "semantic_vs_fixed": 0.0238,
+      "semantic_vs_structure": 0.0
+    },
+    "recall_at_metric_k": {
+      "fixed": 0.963,
+      "structure": 0.963,
+      "semantic": 0.9815,
+      "semantic_vs_fixed": 0.0185,
+      "semantic_vs_structure": 0.0185
+    },
+    "mrr": {
+      "fixed": 0.9306,
+      "structure": 0.9841,
+      "semantic": 0.9563,
+      "semantic_vs_fixed": 0.0257,
+      "semantic_vs_structure": -0.0278
+    },
+    "latency_ms_avg": {
+      "fixed": 18.21,
+      "structure": 19.54,
+      "semantic": 19.31,
+      "semantic_vs_fixed": 1.1,
+      "semantic_vs_structure": -0.23
+    },
+    "latency_ms_p50": {
+      "fixed": 17.82,
+      "structure": 19.29,
+      "semantic": 18.78,
+      "semantic_vs_fixed": 0.96,
+      "semantic_vs_structure": -0.51
+    },
+    "latency_ms_max": {
+      "fixed": 29.0,
+      "structure": 28.6,
+      "semantic": 31.88,
+      "semantic_vs_fixed": 2.88,
+      "semantic_vs_structure": 3.28
+    }
+  },
+  "semantic_vs_fixed": {
+    "improved": [],
+    "regressed": [],
+    "both_failed": [
+      {
+        "id": "E33",
+        "category": "multi_doc",
+        "baseline_ok": false,
+        "candidate_ok": false,
+        "baseline_ranks": [
+          null,
+          null
+        ],
+        "candidate_ranks": [
+          1,
+          null
+        ]
+      }
+    ]
+  },
+  "semantic_vs_structure": {
+    "improved": [
+      {
+        "id": "E32",
+        "category": "cross_page",
+        "baseline_ok": false,
+        "candidate_ok": true,
+        "baseline_ranks": [
+          1,
+          null
+        ],
+        "candidate_ranks": [
+          1,
+          4
+        ]
+      }
+    ],
+    "regressed": [],
+    "both_failed": [
+      {
+        "id": "E33",
+        "category": "multi_doc",
+        "baseline_ok": false,
+        "candidate_ok": false,
+        "baseline_ranks": [
+          1,
+          null
+        ],
+        "candidate_ranks": [
+          1,
+          null
+        ]
+      }
+    ]
+  }
+}

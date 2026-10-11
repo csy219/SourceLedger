@@ -1,0 +1,36 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Runtime data
+uploads/
+chroma_db/
+chroma_db_*/
+logs/
+*.log
+
+# Evaluation vector stores
+evaluation/*.chroma/
+evaluation/baseline_chroma/
+evaluation/parent_child_chroma/
+evaluation/trace_chroma/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# IDE
+.vscode/
+.idea/
+
+# Backups
+README.old.md

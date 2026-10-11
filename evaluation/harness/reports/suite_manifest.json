@@ -1,0 +1,25 @@
+{
+  "status": "ok",
+  "report_dir": "C:\\Users\\ASUS\\Desktop\\agent-learningstage1\\project_a\\evaluation\\harness\\reports",
+  "reports": {
+    "chunk": [
+      "chunk_fixed.json",
+      "chunk_structure.json",
+      "chunk_semantic.json",
+      "chunk_parent_child.json"
+    ],
+    "retrieval": [
+      "vector.json",
+      "bm25.json",
+      "hybrid.json"
+    ],
+    "comparison": [
+      "core_comparison.json",
+      "core_comparison.md"
+    ],
+    "rerank": [
+      "rerank_hybrid.json",
+      "rerank_comparison.json"
+    ]
+  }
+}

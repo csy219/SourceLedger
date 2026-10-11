@@ -1,0 +1,567 @@
+{
+  "collection": "semantic_chunk_baseline",
+  "eval_set": "C:\\Users\\ASUS\\Desktop\\agent-learningstage1\\project_a\\evaluation\\eval_set.json",
+  "db": "C:\\Users\\ASUS\\Desktop\\agent-learningstage1\\project_a\\evaluation\\baseline.chroma",
+  "results": [
+    {
+      "config": {
+        "candidate_k": 4,
+        "metric_k": 4,
+        "threshold": 0.35
+      },
+      "summary": {
+        "cases": 46,
+        "retrieval_passed": 45,
+        "retrieval_accuracy": 0.9783,
+        "cases_with_expected_sources": 42,
+        "hit_at_1": 0.9286,
+        "hit_at_metric_k": 1.0,
+        "recall_at_metric_k": 0.9815,
+        "mrr": 0.9563,
+        "latency_ms_avg": 47.36,
+        "latency_ms_p50": 19.84,
+        "latency_ms_max": 1267.96,
+        "parent_occurrences_avg": 0,
+        "unique_parents_avg": 0,
+        "context_chars_avg": 0,
+        "context_chars_max": 0,
+        "context_tokens_est_avg": 0
+      },
+      "failed_ids": [
+        "E33"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 4,
+        "metric_k": 4,
+        "threshold": 0.4
+      },
+      "summary": {
+        "cases": 46,
+        "retrieval_passed": 45,
+        "retrieval_accuracy": 0.9783,
+        "cases_with_expected_sources": 42,
+        "hit_at_1": 0.9286,
+        "hit_at_metric_k": 1.0,
+        "recall_at_metric_k": 0.9815,
+        "mrr": 0.9563,
+        "latency_ms_avg": 19.83,
+        "latency_ms_p50": 19.02,
+        "latency_ms_max": 43.21,
+        "parent_occurrences_avg": 0,
+        "unique_parents_avg": 0,
+        "context_chars_avg": 0,
+        "context_chars_max": 0,
+        "context_tokens_est_avg": 0
+      },
+      "failed_ids": [
+        "E33"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 4,
+        "metric_k": 4,
+        "threshold": 0.45
+      },
+      "summary": {
+        "cases": 46,
+        "retrieval_passed": 45,
+        "retrieval_accuracy": 0.9783,
+        "cases_with_expected_sources": 42,
+        "hit_at_1": 0.9286,
+        "hit_at_metric_k": 1.0,
+        "recall_at_metric_k": 0.9815,
+        "mrr": 0.9563,
+        "latency_ms_avg": 17.99,
+        "latency_ms_p50": 17.96,
+        "latency_ms_max": 21.66,
+        "parent_occurrences_avg": 0,
+        "unique_parents_avg": 0,
+        "context_chars_avg": 0,
+        "context_chars_max": 0,
+        "context_tokens_est_avg": 0
+      },
+      "failed_ids": [
+        "E33"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 4,
+        "metric_k": 4,
+        "threshold": 0.5
+      },
+      "summary": {
+        "cases": 46,
+        "retrieval_passed": 45,
+        "retrieval_accuracy": 0.9783,
+        "cases_with_expected_sources": 42,
+        "hit_at_1": 0.9286,
+        "hit_at_metric_k": 1.0,
+        "recall_at_metric_k": 0.9815,
+        "mrr": 0.9563,
+        "latency_ms_avg": 17.75,
+        "latency_ms_p50": 17.61,
+        "latency_ms_max": 21.8,
+        "parent_occurrences_avg": 0,
+        "unique_parents_avg": 0,
+        "context_chars_avg": 0,
+        "context_chars_max": 0,
+        "context_tokens_est_avg": 0
+      },
+      "failed_ids": [
+        "E33"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 4,
+        "metric_k": 4,
+        "threshold": 0.55
+      },
+      "summary": {
+        "cases": 46,
+        "retrieval_passed": 45,
+        "retrieval_accuracy": 0.9783,
+        "cases_with_expected_sources": 42,
+        "hit_at_1": 0.9286,
+        "hit_at_metric_k": 1.0,
+        "recall_at_metric_k": 0.9815,
+        "mrr": 0.9563,
+        "latency_ms_avg": 17.68,
+        "latency_ms_p50": 17.41,
+        "latency_ms_max": 23.46,
+        "parent_occurrences_avg": 0,
+        "unique_parents_avg": 0,
+        "context_chars_avg": 0,
+        "context_chars_max": 0,
+        "context_tokens_est_avg": 0
+      },
+      "failed_ids": [
+        "E33"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 6,
+        "metric_k": 4,
+        "threshold": 0.35
+      },
+      "summary": {
+        "cases": 46,
+        "retrieval_passed": 45,
+        "retrieval_accuracy": 0.9783,
+        "cases_with_expected_sources": 42,
+        "hit_at_1": 0.9286,
+        "hit_at_metric_k": 1.0,
+        "recall_at_metric_k": 0.9815,
+        "mrr": 0.9563,
+        "latency_ms_avg": 18.51,
+        "latency_ms_p50": 18.53,
+        "latency_ms_max": 25.02,
+        "parent_occurrences_avg": 0,
+        "unique_parents_avg": 0,
+        "context_chars_avg": 0,
+        "context_chars_max": 0,
+        "context_tokens_est_avg": 0
+      },
+      "failed_ids": [
+        "E33"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 6,
+        "metric_k": 4,
+        "threshold": 0.4
+      },
+      "summary": {
+        "cases": 46,
+        "retrieval_passed": 45,
+        "retrieval_accuracy": 0.9783,
+        "cases_with_expected_sources": 42,
+        "hit_at_1": 0.9286,
+        "hit_at_metric_k": 1.0,
+        "recall_at_metric_k": 0.9815,
+        "mrr": 0.9563,
+        "latency_ms_avg": 18.15,
+        "latency_ms_p50": 18.04,
+        "latency_ms_max": 22.73,
+        "parent_occurrences_avg": 0,
+        "unique_parents_avg": 0,
+        "context_chars_avg": 0,
+        "context_chars_max": 0,
+        "context_tokens_est_avg": 0
+      },
+      "failed_ids": [
+        "E33"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 6,
+        "metric_k": 4,
+        "threshold": 0.45
+      },
+      "summary": {
+        "cases": 46,
+        "retrieval_passed": 45,
+        "retrieval_accuracy": 0.9783,
+        "cases_with_expected_sources": 42,
+        "hit_at_1": 0.9286,
+        "hit_at_metric_k": 1.0,
+        "recall_at_metric_k": 0.9815,
+        "mrr": 0.9563,
+        "latency_ms_avg": 18.0,
+        "latency_ms_p50": 18.23,
+        "latency_ms_max": 21.16,
+        "parent_occurrences_avg": 0,
+        "unique_parents_avg": 0,
+        "context_chars_avg": 0,
+        "context_chars_max": 0,
+        "context_tokens_est_avg": 0
+      },
+      "failed_ids": [
+        "E33"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 6,
+        "metric_k": 4,
+        "threshold": 0.5
+      },
+      "summary": {
+        "cases": 46,
+        "retrieval_passed": 45,
+        "retrieval_accuracy": 0.9783,
+        "cases_with_expected_sources": 42,
+        "hit_at_1": 0.9286,
+        "hit_at_metric_k": 1.0,
+        "recall_at_metric_k": 0.9815,
+        "mrr": 0.9563,
+        "latency_ms_avg": 18.18,
+        "latency_ms_p50": 18.05,
+        "latency_ms_max": 21.05,
+        "parent_occurrences_avg": 0,
+        "unique_parents_avg": 0,
+        "context_chars_avg": 0,
+        "context_chars_max": 0,
+        "context_tokens_est_avg": 0
+      },
+      "failed_ids": [
+        "E33"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 6,
+        "metric_k": 4,
+        "threshold": 0.55
+      },
+      "summary": {
+        "cases": 46,
+        "retrieval_passed": 45,
+        "retrieval_accuracy": 0.9783,
+        "cases_with_expected_sources": 42,
+        "hit_at_1": 0.9286,
+        "hit_at_metric_k": 1.0,
+        "recall_at_metric_k": 0.9815,
+        "mrr": 0.9563,
+        "latency_ms_avg": 17.88,
+        "latency_ms_p50": 17.75,
+        "latency_ms_max": 23.68,
+        "parent_occurrences_avg": 0,
+        "unique_parents_avg": 0,
+        "context_chars_avg": 0,
+        "context_chars_max": 0,
+        "context_tokens_est_avg": 0
+      },
+      "failed_ids": [
+        "E33"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 10,
+        "metric_k": 4,
+        "threshold": 0.35
+      },
+      "summary": {
+        "cases": 46,
+        "retrieval_passed": 45,
+        "retrieval_accuracy": 0.9783,
+        "cases_with_expected_sources": 42,
+        "hit_at_1": 0.9286,
+        "hit_at_metric_k": 1.0,
+        "recall_at_metric_k": 0.9815,
+        "mrr": 0.9563,
+        "latency_ms_avg": 18.72,
+        "latency_ms_p50": 18.48,
+        "latency_ms_max": 26.91,
+        "parent_occurrences_avg": 0,
+        "unique_parents_avg": 0,
+        "context_chars_avg": 0,
+        "context_chars_max": 0,
+        "context_tokens_est_avg": 0
+      },
+      "failed_ids": [
+        "E33"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 10,
+        "metric_k": 4,
+        "threshold": 0.4
+      },
+      "summary": {
+        "cases": 46,
+        "retrieval_passed": 45,
+        "retrieval_accuracy": 0.9783,
+        "cases_with_expected_sources": 42,
+        "hit_at_1": 0.9286,
+        "hit_at_metric_k": 1.0,
+        "recall_at_metric_k": 0.9815,
+        "mrr": 0.9563,
+        "latency_ms_avg": 18.16,
+        "latency_ms_p50": 18.36,
+        "latency_ms_max": 21.36,
+        "parent_occurrences_avg": 0,
+        "unique_parents_avg": 0,
+        "context_chars_avg": 0,
+        "context_chars_max": 0,
+        "context_tokens_est_avg": 0
+      },
+      "failed_ids": [
+        "E33"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 10,
+        "metric_k": 4,
+        "threshold": 0.45
+      },
+      "summary": {
+        "cases": 46,
+        "retrieval_passed": 45,
+        "retrieval_accuracy": 0.9783,
+        "cases_with_expected_sources": 42,
+        "hit_at_1": 0.9286,
+        "hit_at_metric_k": 1.0,
+        "recall_at_metric_k": 0.9815,
+        "mrr": 0.9563,
+        "latency_ms_avg": 18.39,
+        "latency_ms_p50": 18.51,
+        "latency_ms_max": 21.47,
+        "parent_occurrences_avg": 0,
+        "unique_parents_avg": 0,
+        "context_chars_avg": 0,
+        "context_chars_max": 0,
+        "context_tokens_est_avg": 0
+      },
+      "failed_ids": [
+        "E33"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 10,
+        "metric_k": 4,
+        "threshold": 0.5
+      },
+      "summary": {
+        "cases": 46,
+        "retrieval_passed": 45,
+        "retrieval_accuracy": 0.9783,
+        "cases_with_expected_sources": 42,
+        "hit_at_1": 0.9286,
+        "hit_at_metric_k": 1.0,
+        "recall_at_metric_k": 0.9815,
+        "mrr": 0.9563,
+        "latency_ms_avg": 19.13,
+        "latency_ms_p50": 19.2,
+        "latency_ms_max": 22.96,
+        "parent_occurrences_avg": 0,
+        "unique_parents_avg": 0,
+        "context_chars_avg": 0,
+        "context_chars_max": 0,
+        "context_tokens_est_avg": 0
+      },
+      "failed_ids": [
+        "E33"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 10,
+        "metric_k": 4,
+        "threshold": 0.55
+      },
+      "summary": {
+        "cases": 46,
+        "retrieval_passed": 45,
+        "retrieval_accuracy": 0.9783,
+        "cases_with_expected_sources": 42,
+        "hit_at_1": 0.9286,
+        "hit_at_metric_k": 1.0,
+        "recall_at_metric_k": 0.9815,
+        "mrr": 0.9563,
+        "latency_ms_avg": 19.1,
+        "latency_ms_p50": 18.98,
+        "latency_ms_max": 22.18,
+        "parent_occurrences_avg": 0,
+        "unique_parents_avg": 0,
+        "context_chars_avg": 0,
+        "context_chars_max": 0,
+        "context_tokens_est_avg": 0
+      },
+      "failed_ids": [
+        "E33"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 20,
+        "metric_k": 4,
+        "threshold": 0.35
+      },
+      "summary": {
+        "cases": 46,
+        "retrieval_passed": 45,
+        "retrieval_accuracy": 0.9783,
+        "cases_with_expected_sources": 42,
+        "hit_at_1": 0.9286,
+        "hit_at_metric_k": 1.0,
+        "recall_at_metric_k": 0.9815,
+        "mrr": 0.9563,
+        "latency_ms_avg": 19.37,
+        "latency_ms_p50": 19.44,
+        "latency_ms_max": 22.59,
+        "parent_occurrences_avg": 0,
+        "unique_parents_avg": 0,
+        "context_chars_avg": 0,
+        "context_chars_max": 0,
+        "context_tokens_est_avg": 0
+      },
+      "failed_ids": [
+        "E33"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 20,
+        "metric_k": 4,
+        "threshold": 0.4
+      },
+      "summary": {
+        "cases": 46,
+        "retrieval_passed": 45,
+        "retrieval_accuracy": 0.9783,
+        "cases_with_expected_sources": 42,
+        "hit_at_1": 0.9286,
+        "hit_at_metric_k": 1.0,
+        "recall_at_metric_k": 0.9815,
+        "mrr": 0.9563,
+        "latency_ms_avg": 19.76,
+        "latency_ms_p50": 19.73,
+        "latency_ms_max": 22.94,
+        "parent_occurrences_avg": 0,
+        "unique_parents_avg": 0,
+        "context_chars_avg": 0,
+        "context_chars_max": 0,
+        "context_tokens_est_avg": 0
+      },
+      "failed_ids": [
+        "E33"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 20,
+        "metric_k": 4,
+        "threshold": 0.45
+      },
+      "summary": {
+        "cases": 46,
+        "retrieval_passed": 45,
+        "retrieval_accuracy": 0.9783,
+        "cases_with_expected_sources": 42,
+        "hit_at_1": 0.9286,
+        "hit_at_metric_k": 1.0,
+        "recall_at_metric_k": 0.9815,
+        "mrr": 0.9563,
+        "latency_ms_avg": 19.48,
+        "latency_ms_p50": 19.55,
+        "latency_ms_max": 22.8,
+        "parent_occurrences_avg": 0,
+        "unique_parents_avg": 0,
+        "context_chars_avg": 0,
+        "context_chars_max": 0,
+        "context_tokens_est_avg": 0
+      },
+      "failed_ids": [
+        "E33"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 20,
+        "metric_k": 4,
+        "threshold": 0.5
+      },
+      "summary": {
+        "cases": 46,
+        "retrieval_passed": 45,
+        "retrieval_accuracy": 0.9783,
+        "cases_with_expected_sources": 42,
+        "hit_at_1": 0.9286,
+        "hit_at_metric_k": 1.0,
+        "recall_at_metric_k": 0.9815,
+        "mrr": 0.9563,
+        "latency_ms_avg": 19.28,
+        "latency_ms_p50": 19.3,
+        "latency_ms_max": 23.27,
+        "parent_occurrences_avg": 0,
+        "unique_parents_avg": 0,
+        "context_chars_avg": 0,
+        "context_chars_max": 0,
+        "context_tokens_est_avg": 0
+      },
+      "failed_ids": [
+        "E33"
+      ]
+    },
+    {
+      "config": {
+        "candidate_k": 20,
+        "metric_k": 4,
+        "threshold": 0.55
+      },
+      "summary": {
+        "cases": 46,
+        "retrieval_passed": 45,
+        "retrieval_accuracy": 0.9783,
+        "cases_with_expected_sources": 42,
+        "hit_at_1": 0.9286,
+        "hit_at_metric_k": 1.0,
+        "recall_at_metric_k": 0.9815,
+        "mrr": 0.9563,
+        "latency_ms_avg": 19.77,
+        "latency_ms_p50": 19.68,
+        "latency_ms_max": 22.8,
+        "parent_occurrences_avg": 0,
+        "unique_parents_avg": 0,
+        "context_chars_avg": 0,
+        "context_chars_max": 0,
+        "context_tokens_est_avg": 0
+      },
+      "failed_ids": [
+        "E33"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "summary_table": {
+    "retrieval_passed": {
+      "no_rerank": 45,
+      "rerank": 45,
+      "delta": 0
+    },
+    "retrieval_accuracy": {
+      "no_rerank": 0.9783,
+      "rerank": 0.9783,
+      "delta": 0.0
+    },
+    "hit_at_1": {
+      "no_rerank": 0.9762,
+      "rerank": 0.9762,
+      "delta": 0.0
+    },
+    "hit_at_metric_k": {
+      "no_rerank": 1.0,
+      "rerank": 1.0,
+      "delta": 0.0
+    },
+    "recall_at_metric_k": {
+      "no_rerank": 0.9815,
+      "rerank": 0.9815,
+      "delta": 0.0
+    },
+    "mrr": {
+      "no_rerank": 0.9881,
+      "rerank": 0.9881,
+      "delta": 0.0
+    },
+    "ndcg_at_4": {
+      "no_rerank": 0.8914,
+      "rerank": 0.8914,
+      "delta": 0.0
+    },
+    "latency_ms_avg": {
+      "no_rerank": 28.64,
+      "rerank": 28.67,
+      "delta": 0.03
+    }
+  },
+  "improved": [],
+  "regressed": [],
+  "both_failed": [
+    {
+      "id": "E33",
+      "category": "multi_doc",
+      "base_ranks": [
+        1,
+        null
+      ],
+      "rerank_ranks": [
+        1,
+        null
+      ],
+      "rank_changes": {
+        "promoted": [],
+        "demoted": [],
+        "unchanged": [
+          {
+            "expected_index": 1,
+            "base_rank": 1,
+            "rerank_rank": 1
+          },
+          {
+            "expected_index": 2,
+            "base_rank": null,
+            "rerank_rank": null
+          }
+        ]
+      }
+    }
+  ],
+  "top1_changed": [
+    {
+      "id": "E38",
+      "category": "multi_doc_consistency",
+      "base_ranks": [
+        2,
+        1
+      ],
+      "rerank_ranks": [
+        1,
+        2
+      ],
+      "rank_changes": {
+        "promoted": [
+          {
+            "expected_index": 1,
+            "base_rank": 2,
+            "rerank_rank": 1
+          }
+        ],
+        "demoted": [
+          {
+            "expected_index": 2,
+            "base_rank": 1,
+            "rerank_rank": 2
+          }
+        ],
+        "unchanged": []
+      },
+      "base_top1": [
+        "差旅报销制度_v2.pdf",
+        1
+      ],
+      "rerank_top1": [
+        "差旅报销制度_v1.pdf",
+        1
+      ]
+    }
+  ],
+  "selected_variant": "filtered_hybrid_k20",
+  "focused_cases": {
+    "E31": {
+      "id": "E31",
+      "category": "cross_page",
+      "base_ranks": [
+        2,
+        1
+      ],
+      "rerank_ranks": [
+        2,
+        1
+      ],
+      "rank_changes": {
+        "promoted": [],
+        "demoted": [],
+        "unchanged": [
+          {
+            "expected_index": 1,
+            "base_rank": 2,
+            "rerank_rank": 2
+          },
+          {
+            "expected_index": 2,
+            "base_rank": 1,
+            "rerank_rank": 1
+          }
+        ]
+      }
+    },
+    "E33": {
+      "id": "E33",
+      "category": "multi_doc",
+      "base_ranks": [
+        1,
+        null
+      ],
+      "rerank_ranks": [
+        1,
+        null
+      ],
+      "rank_changes": {
+        "promoted": [],
+        "demoted": [],
+        "unchanged": [
+          {
+            "expected_index": 1,
+            "base_rank": 1,
+            "rerank_rank": 1
+          },
+          {
+            "expected_index": 2,
+            "base_rank": null,
+            "rerank_rank": null
+          }
+        ]
+      }
+    },
+    "E34": {
+      "id": "E34",
+      "category": "multi_doc",
+      "base_ranks": [
+        1,
+        3
+      ],
+      "rerank_ranks": [
+        1,
+        3
+      ],
+      "rank_changes": {
+        "promoted": [],
+        "demoted": [],
+        "unchanged": [
+          {
+            "expected_index": 1,
+            "base_rank": 1,
+            "rerank_rank": 1
+          },
+          {
+            "expected_index": 2,
+            "base_rank": 3,
+            "rerank_rank": 3
+          }
+        ]
+      }
+    }
+  }
+}

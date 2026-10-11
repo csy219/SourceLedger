@@ -1,0 +1,184 @@
+{
+  "config": {
+    "metric_k": 4,
+    "candidate_k": 20
+  },
+  "summaries": {
+    "vector": {
+      "cases": 46,
+      "retrieval_accuracy": 0.9783,
+      "cases_with_expected_sources": 42,
+      "hit_at_1": 0.9286,
+      "hit_at_k": 1.0,
+      "recall_at_k": 0.9881,
+      "mrr": 0.9563,
+      "ndcg_at_k": 0.9569,
+      "latency_ms_avg": 24.962,
+      "latency_ms_p50": 20.18,
+      "latency_ms_p95": 25.36,
+      "latency_ms_max": 219.96,
+      "context_tokens_avg": 787.0217,
+      "context_tokens_max": 1149,
+      "context_chars_avg": 1997.4565,
+      "source_diversity_avg": 0.1707,
+      "duplicate_text_count": 0,
+      "invalid_citation_count": 0,
+      "budget_violation_count": 0,
+      "conflict_cases": 13,
+      "retrieval_failed_cases": 1,
+      "retrieval_failed_ids": [
+        "E33"
+      ],
+      "pipeline_failed_cases": 0,
+      "pipeline_failed_ids": [],
+      "failed_cases": 1,
+      "failed_ids": [
+        "E33"
+      ]
+    },
+    "bm25": {
+      "cases": 46,
+      "retrieval_accuracy": 0.8696,
+      "cases_with_expected_sources": 42,
+      "hit_at_1": 0.7381,
+      "hit_at_k": 1.0,
+      "recall_at_k": 0.9643,
+      "mrr": 0.8611,
+      "ndcg_at_k": 0.8739,
+      "latency_ms_avg": 0.6665,
+      "latency_ms_p50": 0.68,
+      "latency_ms_p95": 0.92,
+      "latency_ms_max": 1.05,
+      "context_tokens_avg": 975.9783,
+      "context_tokens_max": 1199,
+      "context_chars_avg": 2425.1304,
+      "source_diversity_avg": 0.1832,
+      "duplicate_text_count": 0,
+      "invalid_citation_count": 0,
+      "budget_violation_count": 0,
+      "conflict_cases": 25,
+      "retrieval_failed_cases": 6,
+      "retrieval_failed_ids": [
+        "E30",
+        "E31",
+        "E33",
+        "E39",
+        "E40",
+        "E41"
+      ],
+      "pipeline_failed_cases": 0,
+      "pipeline_failed_ids": [],
+      "failed_cases": 6,
+      "failed_ids": [
+        "E30",
+        "E31",
+        "E33",
+        "E39",
+        "E40",
+        "E41"
+      ]
+    },
+    "hybrid": {
+      "cases": 46,
+      "retrieval_accuracy": 0.9783,
+      "cases_with_expected_sources": 42,
+      "hit_at_1": 0.9762,
+      "hit_at_k": 1.0,
+      "recall_at_k": 0.9881,
+      "mrr": 0.9881,
+      "ndcg_at_k": 0.9763,
+      "latency_ms_avg": 30.6246,
+      "latency_ms_p50": 25.66,
+      "latency_ms_p95": 33.45,
+      "latency_ms_max": 217.92,
+      "context_tokens_avg": 911.0435,
+      "context_tokens_max": 1179,
+      "context_chars_avg": 2274.6304,
+      "source_diversity_avg": 0.1637,
+      "duplicate_text_count": 0,
+      "invalid_citation_count": 0,
+      "budget_violation_count": 0,
+      "conflict_cases": 16,
+      "retrieval_failed_cases": 1,
+      "retrieval_failed_ids": [
+        "E33"
+      ],
+      "pipeline_failed_cases": 0,
+      "pipeline_failed_ids": [],
+      "failed_cases": 1,
+      "failed_ids": [
+        "E33"
+      ]
+    }
+  },
+  "best_metrics": {
+    "hit_at_1": {
+      "best_runner": "hybrid",
+      "best_value": 0.9762
+    },
+    "context_tokens_avg": {
+      "best_runner": "vector",
+      "best_value": 787.0217
+    },
+    "ndcg_at_k": {
+      "best_runner": "hybrid",
+      "best_value": 0.9763
+    },
+    "latency_ms_avg": {
+      "best_runner": "bm25",
+      "best_value": 0.6665
+    },
+    "mrr": {
+      "best_runner": "hybrid",
+      "best_value": 0.9881
+    },
+    "retrieval_accuracy": {
+      "best_runner": "vector",
+      "best_value": 0.9783
+    },
+    "hit_at_k": {
+      "best_runner": "vector",
+      "best_value": 1.0
+    },
+    "recall_at_k": {
+      "best_runner": "vector",
+      "best_value": 0.9881
+    }
+  },
+  "case_differences": {
+    "all_failed": [
+      "E33"
+    ],
+    "hybrid_fixes": [],
+    "hybrid_regressions": [],
+    "retrieval_failed": {
+      "vector": [
+        "E33"
+      ],
+      "bm25": [
+        "E30",
+        "E31",
+        "E33",
+        "E39",
+        "E40",
+        "E41"
+      ],
+      "hybrid": [
+        "E33"
+      ]
+    }
+  },
+  "category_failures": {
+    "vector": {
+      "multi_doc": 1
+    },
+    "bm25": {
+      "cross_page": 2,
+      "multi_doc": 1,
+      "unanswerable": 3
+    },
+    "hybrid": {
+      "multi_doc": 1
+    }
+  }
+}

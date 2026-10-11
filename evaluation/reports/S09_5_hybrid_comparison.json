@@ -1,0 +1,166 @@
+{
+  "summary_table": {
+    "retrieval_passed": {
+      "vector": 45,
+      "bm25": 43,
+      "rrf": 45,
+      "weighted_0_7": 45,
+      "weighted_0_5": 44
+    },
+    "retrieval_accuracy": {
+      "vector": 0.9783,
+      "bm25": 0.9348,
+      "rrf": 0.9783,
+      "weighted_0_7": 0.9783,
+      "weighted_0_5": 0.9565
+    },
+    "hit_at_1": {
+      "vector": 0.9286,
+      "bm25": 0.7381,
+      "rrf": 0.9762,
+      "weighted_0_7": 0.9286,
+      "weighted_0_5": 0.9048
+    },
+    "hit_at_metric_k": {
+      "vector": 1.0,
+      "bm25": 1.0,
+      "rrf": 1.0,
+      "weighted_0_7": 1.0,
+      "weighted_0_5": 1.0
+    },
+    "recall_at_metric_k": {
+      "vector": 0.9815,
+      "bm25": 0.9444,
+      "rrf": 0.9815,
+      "weighted_0_7": 0.9815,
+      "weighted_0_5": 0.963
+    },
+    "mrr": {
+      "vector": 0.9563,
+      "bm25": 0.8611,
+      "rrf": 0.9881,
+      "weighted_0_7": 0.9643,
+      "weighted_0_5": 0.9524
+    },
+    "latency_ms_avg": {
+      "vector": 21.73,
+      "bm25": 0.59,
+      "rrf": 22.33,
+      "weighted_0_7": 22.33,
+      "weighted_0_5": 22.33
+    }
+  },
+  "best_variant": "rrf",
+  "comparisons_vs_vector": {
+    "bm25": {
+      "improved": [],
+      "regressed": [
+        {
+          "id": "E30",
+          "category": "cross_page",
+          "vector_ranks": [
+            2,
+            1
+          ],
+          "variant_ranks": [
+            null,
+            2
+          ]
+        },
+        {
+          "id": "E31",
+          "category": "cross_page",
+          "vector_ranks": [
+            2,
+            1
+          ],
+          "variant_ranks": [
+            null,
+            1
+          ]
+        }
+      ],
+      "both_failed": [
+        {
+          "id": "E33",
+          "category": "multi_doc",
+          "vector_ranks": [
+            1,
+            null
+          ],
+          "variant_ranks": [
+            2,
+            null
+          ]
+        }
+      ]
+    },
+    "rrf": {
+      "improved": [],
+      "regressed": [],
+      "both_failed": [
+        {
+          "id": "E33",
+          "category": "multi_doc",
+          "vector_ranks": [
+            1,
+            null
+          ],
+          "variant_ranks": [
+            1,
+            null
+          ]
+        }
+      ]
+    },
+    "weighted_0_7": {
+      "improved": [],
+      "regressed": [],
+      "both_failed": [
+        {
+          "id": "E33",
+          "category": "multi_doc",
+          "vector_ranks": [
+            1,
+            null
+          ],
+          "variant_ranks": [
+            2,
+            null
+          ]
+        }
+      ]
+    },
+    "weighted_0_5": {
+      "improved": [],
+      "regressed": [
+        {
+          "id": "E30",
+          "category": "cross_page",
+          "vector_ranks": [
+            2,
+            1
+          ],
+          "variant_ranks": [
+            null,
+            1
+          ]
+        }
+      ],
+      "both_failed": [
+        {
+          "id": "E33",
+          "category": "multi_doc",
+          "vector_ranks": [
+            1,
+            null
+          ],
+          "variant_ranks": [
+            2,
+            null
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,358 @@
+{
+  "summary_table": {
+    "retrieval_passed": {
+      "no_rerank": 45,
+      "rerank": 44,
+      "delta": -1
+    },
+    "retrieval_accuracy": {
+      "no_rerank": 0.9783,
+      "rerank": 0.9565,
+      "delta": -0.0218
+    },
+    "hit_at_1": {
+      "no_rerank": 0.9762,
+      "rerank": 0.9762,
+      "delta": 0.0
+    },
+    "hit_at_metric_k": {
+      "no_rerank": 1.0,
+      "rerank": 1.0,
+      "delta": 0.0
+    },
+    "recall_at_metric_k": {
+      "no_rerank": 0.9815,
+      "rerank": 0.963,
+      "delta": -0.0185
+    },
+    "mrr": {
+      "no_rerank": 0.9881,
+      "rerank": 0.9881,
+      "delta": 0.0
+    },
+    "ndcg_at_4": {
+      "no_rerank": 0.8914,
+      "rerank": 0.8882,
+      "delta": -0.0032
+    },
+    "latency_ms_avg": {
+      "no_rerank": 17.57,
+      "rerank": 4035.67,
+      "delta": 4018.1
+    }
+  },
+  "improved": [
+    {
+      "id": "E33",
+      "category": "multi_doc",
+      "base_ranks": [
+        1,
+        null
+      ],
+      "rerank_ranks": [
+        1,
+        2
+      ],
+      "rank_changes": {
+        "promoted": [
+          {
+            "expected_index": 2,
+            "base_rank": null,
+            "rerank_rank": 2
+          }
+        ],
+        "demoted": [],
+        "unchanged": [
+          {
+            "expected_index": 1,
+            "base_rank": 1,
+            "rerank_rank": 1
+          }
+        ]
+      }
+    }
+  ],
+  "regressed": [
+    {
+      "id": "E31",
+      "category": "cross_page",
+      "base_ranks": [
+        2,
+        1
+      ],
+      "rerank_ranks": [
+        null,
+        1
+      ],
+      "rank_changes": {
+        "promoted": [],
+        "demoted": [
+          {
+            "expected_index": 1,
+            "base_rank": 2,
+            "rerank_rank": null
+          }
+        ],
+        "unchanged": [
+          {
+            "expected_index": 2,
+            "base_rank": 1,
+            "rerank_rank": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "E34",
+      "category": "multi_doc",
+      "base_ranks": [
+        1,
+        3
+      ],
+      "rerank_ranks": [
+        null,
+        1
+      ],
+      "rank_changes": {
+        "promoted": [
+          {
+            "expected_index": 2,
+            "base_rank": 3,
+            "rerank_rank": 1
+          }
+        ],
+        "demoted": [
+          {
+            "expected_index": 1,
+            "base_rank": 1,
+            "rerank_rank": null
+          }
+        ],
+        "unchanged": []
+      }
+    }
+  ],
+  "both_failed": [],
+  "top1_changed": [
+    {
+      "id": "E30",
+      "category": "cross_page",
+      "base_ranks": [
+        3,
+        1
+      ],
+      "rerank_ranks": [
+        1,
+        2
+      ],
+      "rank_changes": {
+        "promoted": [
+          {
+            "expected_index": 1,
+            "base_rank": 3,
+            "rerank_rank": 1
+          }
+        ],
+        "demoted": [
+          {
+            "expected_index": 2,
+            "base_rank": 1,
+            "rerank_rank": 2
+          }
+        ],
+        "unchanged": []
+      },
+      "base_top1": [
+        "AI应用开发知识手册.pdf",
+        6
+      ],
+      "rerank_top1": [
+        "AI应用开发知识手册.pdf",
+        5
+      ]
+    },
+    {
+      "id": "E34",
+      "category": "multi_doc",
+      "base_ranks": [
+        1,
+        3
+      ],
+      "rerank_ranks": [
+        null,
+        1
+      ],
+      "rank_changes": {
+        "promoted": [
+          {
+            "expected_index": 2,
+            "base_rank": 3,
+            "rerank_rank": 1
+          }
+        ],
+        "demoted": [
+          {
+            "expected_index": 1,
+            "base_rank": 1,
+            "rerank_rank": null
+          }
+        ],
+        "unchanged": []
+      },
+      "base_top1": [
+        "Agent平台需求说明.pdf",
+        2
+      ],
+      "rerank_top1": [
+        "AI应用开发知识手册.pdf",
+        10
+      ]
+    },
+    {
+      "id": "E37",
+      "category": "conflict",
+      "base_ranks": [
+        1,
+        2
+      ],
+      "rerank_ranks": [
+        2,
+        1
+      ],
+      "rank_changes": {
+        "promoted": [
+          {
+            "expected_index": 2,
+            "base_rank": 2,
+            "rerank_rank": 1
+          }
+        ],
+        "demoted": [
+          {
+            "expected_index": 1,
+            "base_rank": 1,
+            "rerank_rank": 2
+          }
+        ],
+        "unchanged": []
+      },
+      "base_top1": [
+        "差旅报销制度_v1.pdf",
+        1
+      ],
+      "rerank_top1": [
+        "差旅报销制度_v2.pdf",
+        1
+      ]
+    },
+    {
+      "id": "E39",
+      "category": "unanswerable",
+      "base_ranks": [],
+      "rerank_ranks": [],
+      "rank_changes": {
+        "promoted": [],
+        "demoted": [],
+        "unchanged": []
+      },
+      "base_top1": [
+        "Agent平台需求说明.pdf",
+        3
+      ],
+      "rerank_top1": [
+        "Agent平台需求说明.pdf",
+        1
+      ]
+    }
+  ],
+  "selected_variant": "filtered_hybrid_k20",
+  "focused_cases": {
+    "E31": {
+      "id": "E31",
+      "category": "cross_page",
+      "base_ranks": [
+        2,
+        1
+      ],
+      "rerank_ranks": [
+        null,
+        1
+      ],
+      "rank_changes": {
+        "promoted": [],
+        "demoted": [
+          {
+            "expected_index": 1,
+            "base_rank": 2,
+            "rerank_rank": null
+          }
+        ],
+        "unchanged": [
+          {
+            "expected_index": 2,
+            "base_rank": 1,
+            "rerank_rank": 1
+          }
+        ]
+      }
+    },
+    "E33": {
+      "id": "E33",
+      "category": "multi_doc",
+      "base_ranks": [
+        1,
+        null
+      ],
+      "rerank_ranks": [
+        1,
+        2
+      ],
+      "rank_changes": {
+        "promoted": [
+          {
+            "expected_index": 2,
+            "base_rank": null,
+            "rerank_rank": 2
+          }
+        ],
+        "demoted": [],
+        "unchanged": [
+          {
+            "expected_index": 1,
+            "base_rank": 1,
+            "rerank_rank": 1
+          }
+        ]
+      }
+    },
+    "E34": {
+      "id": "E34",
+      "category": "multi_doc",
+      "base_ranks": [
+        1,
+        3
+      ],
+      "rerank_ranks": [
+        null,
+        1
+      ],
+      "rank_changes": {
+        "promoted": [
+          {
+            "expected_index": 2,
+            "base_rank": 3,
+            "rerank_rank": 1
+          }
+        ],
+        "demoted": [
+          {
+            "expected_index": 1,
+            "base_rank": 1,
+            "rerank_rank": null
+          }
+        ],
+        "unchanged": []
+      }
+    }
+  }
+}

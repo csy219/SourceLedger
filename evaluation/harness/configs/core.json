@@ -1,0 +1,28 @@
+{
+  "name": "core",
+  "eval_set": "../../eval_set.json",
+  "corpus": "../../corpus",
+  "db": "../../baseline.chroma",
+  "collection": "semantic_chunk_baseline",
+  "candidate_k": 20,
+  "metric_k": 4,
+  "retrieval_budget": 1800,
+  "chunk_modes": [
+    "fixed",
+    "structure",
+    "semantic",
+    "parent_child"
+  ],
+  "retrieval_modes": [
+    "vector",
+    "bm25",
+    "rrf_hybrid"
+  ],
+  "use_rerank": false,
+  "use_context_packing": true,
+  "distance_threshold": 0.5,
+  "chunk_size": 400,
+  "overlap": 80,
+  "semantic_threshold": 0.72,
+  "rrf_k": 60
+}

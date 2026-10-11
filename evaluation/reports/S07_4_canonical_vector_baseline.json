@@ -1,0 +1,37 @@
+{
+  "selection": {
+    "chunk_mode": "semantic",
+    "embedding_model": "BAAI/bge-small-zh-v1.5",
+    "candidate_k": 10,
+    "metric_k": 4,
+    "threshold": 0.5,
+    "retrieval": "vector_only"
+  },
+  "reason": {
+    "all_sweep_quality_metrics_equal": true,
+    "candidate_k_10": "为后续 rerank 和 source diversity 保留候选空间，同时控制上下文成本",
+    "threshold_0_5": "在 0.35-0.55 范围内无答案判定稳定，保持当前结果一致"
+  },
+  "sweep_source": "C:\\Users\\ASUS\\Desktop\\agent-learningstage1\\project_a\\evaluation\\reports\\S07_2_semantic_vector_sweep.json",
+  "summary": {
+    "cases": 46,
+    "retrieval_passed": 45,
+    "retrieval_accuracy": 0.9783,
+    "cases_with_expected_sources": 42,
+    "hit_at_1": 0.9286,
+    "hit_at_metric_k": 1.0,
+    "recall_at_metric_k": 0.9815,
+    "mrr": 0.9563,
+    "latency_ms_avg": 19.13,
+    "latency_ms_p50": 19.2,
+    "latency_ms_max": 22.96,
+    "parent_occurrences_avg": 0,
+    "unique_parents_avg": 0,
+    "context_chars_avg": 0,
+    "context_chars_max": 0,
+    "context_tokens_est_avg": 0
+  },
+  "failed_ids": [
+    "E33"
+  ]
+}

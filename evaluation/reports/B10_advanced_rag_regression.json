@@ -1,0 +1,242 @@
+{
+  "suite": "B10_advanced_rag_regression",
+  "all_passed": true,
+  "sections": {
+    "real_ask": {
+      "passed": true,
+      "elapsed_ms": 37684.26,
+      "run_id": "b10-real-ask-001",
+      "status": "succeeded",
+      "citation_count": 1,
+      "context_tokens": 1400,
+      "total_tokens": 1966,
+      "latency_ms": 37683.97,
+      "vector_count": 13,
+      "bm25_count": 8,
+      "rrf_count": 13,
+      "rerank_count": 13,
+      "operations": [
+        "bm25_search",
+        "context_pack",
+        "llm_rewrite",
+        "model_call",
+        "normalize_request",
+        "parallel_retrieval",
+        "rerank",
+        "rrf_fusion",
+        "vector_search"
+      ],
+      "answer_preview": "根据差旅报销制度，国内出差住宿标准为每晚上限 500 元。[C1]\n\n该制度还规定：高铁统一乘坐二等座；单次差旅预计总费用超过 1000 元时必须提前审批；报销必须提供发票和审批记录。[C1]",
+      "trace": [
+        {
+          "event_id": "b10-real-ask-001:request",
+          "run_id": "b10-real-ask-001",
+          "stage": "query_rewrite",
+          "operation": "normalize_request",
+          "status": "succeeded",
+          "attempt": 1,
+          "action": "keep_original_and_normalize",
+          "started_at": "2026-10-10T03:18:29.528137+00:00",
+          "finished_at": "",
+          "duration_ms": 0.0,
+          "metadata": {
+            "question_length": 16
+          }
+        },
+        {
+          "event_id": "b10-real-ask-001:rewrite",
+          "run_id": "b10-real-ask-001",
+          "stage": "query_rewrite",
+          "operation": "llm_rewrite",
+          "status": "succeeded",
+          "attempt": 1,
+          "action": "deepseek_structured_json",
+          "started_at": "2026-10-10T03:18:32.378923+00:00",
+          "finished_at": "",
+          "duration_ms": 2850.5,
+          "metadata": {
+            "model_name": "deepseek-v4-flash",
+            "version_policy": "latest",
+            "must_disclose_conflicts": true,
+            "usage": {
+              "input_tokens": 425,
+              "output_tokens": 296,
+              "total_tokens": 721,
+              "cache_read_tokens": 256
+            },
+            "fallback_reason": "",
+            "elapsed_ms": 2850.8
+          }
+        },
+        {
+          "event_id": "b10-real-ask-001:vector",
+          "run_id": "b10-real-ask-001",
+          "stage": "retrieval",
+          "operation": "vector_search",
+          "status": "succeeded",
+          "attempt": 1,
+          "action": "chroma_vector",
+          "started_at": "2026-10-10T03:19:05.910875+00:00",
+          "finished_at": "",
+          "duration_ms": 1082.48,
+          "metadata": {
+            "candidate_count": 13,
+            "semantic_query": "差旅报销制度中的住宿标准是什么？",
+            "error": "",
+            "execution_source": "retrieval.vector",
+            "attempts": 1,
+            "fallback_attempts": []
+          }
+        },
+        {
+          "event_id": "b10-real-ask-001:bm25",
+          "run_id": "b10-real-ask-001",
+          "stage": "retrieval",
+          "operation": "bm25_search",
+          "status": "succeeded",
+          "attempt": 1,
+          "action": "bm25_keyword",
+          "started_at": "2026-10-10T03:19:05.910889+00:00",
+          "finished_at": "",
+          "duration_ms": 3.95,
+          "metadata": {
+            "candidate_count": 8,
+            "keyword_query": "差旅报销制度 住宿标准",
+            "error": "",
+            "execution_source": "retrieval.bm25",
+            "attempts": 1,
+            "fallback_attempts": []
+          }
+        },
+        {
+          "event_id": "b10-real-ask-001:parallel_retrieval",
+          "run_id": "b10-real-ask-001",
+          "stage": "retrieval",
+          "operation": "parallel_retrieval",
+          "status": "succeeded",
+          "attempt": 1,
+          "action": "vector_and_bm25",
+          "started_at": "2026-10-10T03:19:05.910905+00:00",
+          "finished_at": "",
+          "duration_ms": 33531.93,
+          "metadata": {
+            "vector_latency_ms": 1082.48,
+            "bm25_latency_ms": 3.95,
+            "vector_count": 13,
+            "bm25_count": 8,
+            "errors": {}
+          }
+        },
+        {
+          "event_id": "b10-real-ask-001:rrf",
+          "run_id": "b10-real-ask-001",
+          "stage": "retrieval",
+          "operation": "rrf_fusion",
+          "status": "succeeded",
+          "attempt": 1,
+          "action": "reciprocal_rank_fusion",
+          "started_at": "2026-10-10T03:19:05.910919+00:00",
+          "finished_at": "",
+          "duration_ms": 0.23,
+          "metadata": {
+            "k": 60,
+            "vector_weight": 1.0,
+            "bm25_weight": 1.0,
+            "vector_count": 13,
+            "bm25_count": 8,
+            "fused_count": 13
+          }
+        },
+        {
+          "event_id": "b10-real-ask-001:rerank",
+          "run_id": "b10-real-ask-001",
+          "stage": "retrieval",
+          "operation": "rerank",
+          "status": "succeeded",
+          "attempt": 1,
+          "action": "cross_encoder",
+          "started_at": "2026-10-10T03:19:05.910840+00:00",
+          "finished_at": "",
+          "duration_ms": 13118.87,
+          "metadata": {
+            "trigger_reason": "small_rrf_margin",
+            "backend": "cross_encoder",
+            "model_name": "BAAI/bge-reranker-v2-m3",
+            "load_ms": 5688.03,
+            "input_count": 13,
+            "output_count": 13,
+            "error": ""
+          }
+        },
+        {
+          "event_id": "b10-real-ask-001:context_pack",
+          "run_id": "b10-real-ask-001",
+          "stage": "context",
+          "operation": "context_pack",
+          "status": "succeeded",
+          "attempt": 1,
+          "action": "deduplicate_and_budget",
+          "started_at": "2026-10-10T03:19:05.912598+00:00",
+          "finished_at": "",
+          "duration_ms": 1.59,
+          "metadata": {
+            "source_stage": "rerank",
+            "input_count": 13,
+            "selected_count": 13,
+            "duplicate_text_count": 0,
+            "context_tokens": 1400,
+            "budget": 1800,
+            "citation_count": 13,
+            "conflict_count": 0,
+            "injection_count": 0,
+            "source_diversity": 0.1538
+          }
+        },
+        {
+          "event_id": "b10-real-ask-001:generation",
+          "run_id": "b10-real-ask-001",
+          "stage": "generation",
+          "operation": "model_call",
+          "status": "succeeded",
+          "attempt": 1,
+          "action": "deepseek_answer",
+          "started_at": "2026-10-10T03:19:07.212022+00:00",
+          "finished_at": "",
+          "duration_ms": 1299.32,
+          "metadata": {
+            "model_name": "deepseek-v4-flash",
+            "usage": {
+              "input_tokens": 1866,
+              "output_tokens": 100,
+              "total_tokens": 1966,
+              "cache_read_tokens": 1664
+            },
+            "cited_ids": [
+              "C1"
+            ],
+            "invalid_citation_ids": [],
+            "citation_count": 1,
+            "failure_code": "",
+            "failure_message": ""
+          }
+        }
+      ]
+    },
+    "context_conflict_and_injection": {
+      "passed": true,
+      "conflict_count": 1,
+      "injection_count": 1,
+      "citation_count": 3
+    },
+    "no_evidence": {
+      "passed": true,
+      "status": "no_evidence",
+      "failure_code": "no_evidence"
+    },
+    "retry_and_fallback": {
+      "passed": true,
+      "value": "recovered",
+      "attempts": 3
+    }
+  }
+}

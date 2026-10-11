@@ -1,0 +1,105 @@
+{
+  "summary_table": {
+    "retrieval_passed": {
+      "s09_rrf": 45,
+      "s10_multi": 45,
+      "delta": 0
+    },
+    "retrieval_accuracy": {
+      "s09_rrf": 0.9783,
+      "s10_multi": 0.9783,
+      "delta": 0.0
+    },
+    "hit_at_1": {
+      "s09_rrf": 0.9762,
+      "s10_multi": 0.9524,
+      "delta": -0.0238
+    },
+    "hit_at_metric_k": {
+      "s09_rrf": 1.0,
+      "s10_multi": 1.0,
+      "delta": 0.0
+    },
+    "recall_at_metric_k": {
+      "s09_rrf": 0.9815,
+      "s10_multi": 0.9815,
+      "delta": 0.0
+    },
+    "mrr": {
+      "s09_rrf": 0.9881,
+      "s10_multi": 0.9762,
+      "delta": -0.0119
+    },
+    "latency_ms_avg": {
+      "s09_rrf": 22.33,
+      "s10_multi": 63.22,
+      "delta": 40.89
+    }
+  },
+  "query_count_avg": 2.913,
+  "fallback_count": 2,
+  "rewrite_latency_ms_avg": 1915.97,
+  "top1_same_rate": 0.9565,
+  "top1_changed": 2,
+  "case_comparison": {
+    "improved": [],
+    "regressed": [],
+    "both_failed": [
+      {
+        "id": "E33",
+        "category": "multi_doc",
+        "base_ranks": [
+          1,
+          null
+        ],
+        "multi_ranks": [
+          1,
+          null
+        ]
+      }
+    ],
+    "top1_changed": [
+      {
+        "id": "E34",
+        "category": "multi_doc",
+        "base_ranks": [
+          1,
+          3
+        ],
+        "multi_ranks": [
+          2,
+          3
+        ],
+        "base_top1": [
+          "Agent平台需求说明.pdf",
+          2
+        ],
+        "multi_top1": [
+          "AI应用开发知识手册.pdf",
+          7
+        ]
+      },
+      {
+        "id": "E38",
+        "category": "multi_doc_consistency",
+        "base_ranks": [
+          2,
+          1
+        ],
+        "multi_ranks": [
+          1,
+          2
+        ],
+        "base_top1": [
+          "差旅报销制度_v2.pdf",
+          1
+        ],
+        "multi_top1": [
+          "差旅报销制度_v1.pdf",
+          1
+        ]
+      }
+    ]
+  },
+  "selected_variant": "s09_rrf"
+}
