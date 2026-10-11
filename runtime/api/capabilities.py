@@ -1,4 +1,4 @@
-# 这是整个 RAG 系统的**标准化能力框架 + HTTP API 层**，相当于给你之前学的所有业务模块（重写、检索、融合、生成、追踪）套上一层「统一外壳」：
+﻿# 这是整个 RAG 系统的**标准化能力框架 + HTTP API 层**，相当于给你之前学的所有业务模块（重写、检索、融合、生成、追踪）套上一层「统一外壳」：
 # 把所有功能都封装成标准化的「能力（Capability）」，统一注册、统一执行、自动全链路追踪，再通过 FastAPI 对外暴露成标准 HTTP 接口。
 # 简单说：**之前是零散的模块，现在做成了可插拔、可调用、可追踪、有 API 的标准化服务**。
 
@@ -256,7 +256,15 @@ class CapabilityRegistry:
             )
         )
         try:
-            output=definition.handler(request,recorder)
+            run_request=request.model_copy(
+                update={
+                    "run_id":run_id
+                }
+            )
+            output=definition.handler(
+                run_request,
+                recorder
+            )
         except Exception as exc:
             latency_ms = round(
                 (
