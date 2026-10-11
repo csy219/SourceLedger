@@ -1,10 +1,35 @@
-# SourceLedger / 源证
+﻿# SourceLedger / 源证
 
 **Verifiable RAG Runtime for enterprise document workflows**
 
-SourceLedger is a production-shaped RAG runtime that combines hybrid retrieval, context packing, citation validation, security guards, resilience policies, PostgreSQL checkpoints and an operational console in one runnable system.
+SourceLedger is a production-shaped RAG runtime: hybrid retrieval, evidence packing with validated citations, prompt-injection guards, resilience policies, PostgreSQL checkpoints and a six-tab operational console in one runnable system.
 
-![SourceLedger Ops Console](docs/ops-console-desktop.png)
+<!--
+DEMO VIDEO -- enable after recording (see 演示视频_拍摄脚本.md)
+
+1. Record the 2-minute walkthrough and export the mp4.
+2. Drag the mp4 into a GitHub issue comment box; GitHub returns a
+   https://github.com/user-attachments/assets/... URL.
+3. Uncomment the block below, paste that URL, commit.
+
+## Demo
+
+[![SourceLedger walkthrough](docs/demo/cover.png)](PASTE_VIDEO_URL_HERE)
+
+> 2-minute walkthrough: hybrid retrieval, citations, context packing, resilience policies,
+> security boundary and run state. Tab-by-tab clips live in `docs/demo/`.
+-->
+
+## Review This Repo In 3 Minutes
+
+| What you want to check | Where to look |
+| --- | --- |
+| It actually runs | Quick Start below, then `GET /health` and `GET /ready` |
+| Not a demo-grade RAG | `Retrieval` and `Context` tabs + `docs/baseline-evaluation-report.md` |
+| Real engineering, not glue code | `Resilience` and `Runtime` tabs + `runtime/resilience/`, `runtime/db/` |
+| Safety is handled, not promised | `Security` tab + `runtime/security/` + security regression 5/5 |
+| Numbers are reproducible | `python -m runtime.C07_capability_regression` returns 12/12 |
+| Honest about limits | Known Limitations at the bottom |
 
 ## What This Project Demonstrates
 
@@ -19,14 +44,26 @@ SourceLedger is a production-shaped RAG runtime that combines hybrid retrieval, 
 
 ## Ops Console
 
-| Tab | What it shows |
-| --- | --- |
-| Query | Real answer, citations, token usage, latency and RunTrace timeline |
-| Retrieval | Vector, BM25, RRF and rerank candidates with rank/score |
-| Context | Deduplication, budget, evidence, citations, conflicts and injections |
-| Resilience | Retry, fallback, circuit breaker, rate limit, lock, idempotency and recovery |
-| Security | Direct/indirect injection and no-evidence abstention |
-| Runtime | PostgreSQL checkpoints, recovery state and runtime trace |
+Six tabs. Each one is a claim you can verify by clicking, not a mock screen:
+
+| Tab | What you see | What it proves | Capability / evidence |
+| --- | --- | --- | --- |
+| Query | Grounded answer, `[C1]` citations, token usage, latency, RunTrace timeline | Retrieval really feeds generation, and answers cite real evidence | `POST /ask`, `GET /runs/{run_id}/trace` |
+| Retrieval | Vector, BM25 and RRF candidates with rank and score | Hybrid retrieval is measured, not assumed | `retrieval_hybrid`, `rerank_comparison` |
+| Context | Deduplication, token budget, source diversity, conflicts, injection flags | Context is packed under a budget, and version conflicts are disclosed | `context_packing` |
+| Resilience | Retry, fallback, circuit breaker, rate limit, lock, idempotency, recovery | Failures are contained by policy, not improvised | `retry_backoff`, `fallback_chain`, `circuit_breaker`, `rate_limit`, `distributed_lock`, `idempotency`, `checkpoint_recovery` |
+| Security | Direct and indirect injection, no-evidence abstention | Retrieved text is treated as untrusted data | `security_injection`, `security_no_evidence` |
+| Runtime | RunState transitions, checkpoints, tool calls, stage-by-stage events | State survives a crash and is replayable | `checkpoint_recovery`, `runtime/db/` |
+
+<!-- Tab clips (uncomment once docs/demo/*.gif exist):
+
+![Query tab](docs/demo/query.gif)
+![Retrieval tab](docs/demo/retrieval.gif)
+![Context tab](docs/demo/context.gif)
+![Resilience tab](docs/demo/resilience.gif)
+![Security tab](docs/demo/security.gif)
+![Runtime tab](docs/demo/runtime.gif)
+-->
 
 ## Architecture
 
@@ -260,6 +297,8 @@ Mobile:
 
 ![Mobile Ops Console](docs/ops-console-mobile.png)
 
+Walkthrough clips and the demo video cover belong in `docs/demo/`.
+
 ## Repository Map
 
 ```text
@@ -270,6 +309,7 @@ Mobile:
   frontend/          React Ops Console
   evaluation/        datasets, harnesses and reports
   docs/              architecture, baselines and acceptance records
+  docs/demo/         walkthrough clips for the README
 ```
 
 ## Known Limitations
@@ -279,6 +319,12 @@ Mobile:
 - SSE currently chunks a completed answer instead of streaming model tokens directly.
 - Authentication, tenant isolation and full RBAC are not part of the first internship version.
 - The current demo corpus is intentionally small and isolated from the enterprise-simulation roadmap.
+
+## Roadmap
+
+- Replace the fake ask function in the load test with a recorded model latency profile.
+- Move SSE to real token streaming.
+- Extend the evaluation corpus and publish a versioned retrieval quality baseline.
 
 ## Project Focus
 
