@@ -156,8 +156,8 @@ fault injection     4/4
 load requests       20
 load concurrency    5
 load failures       0
-p50                 135.01 ms
-p95                 286.89 ms
+p50                 120-135 ms  (per run; see evaluation/reports/S19_6_load_test.json)
+p95                 282-287 ms
 ```
 
 ## API
