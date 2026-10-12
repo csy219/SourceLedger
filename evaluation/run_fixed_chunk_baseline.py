@@ -29,7 +29,7 @@ from S06_2_parent_child_index import(
 # Path(__file__)：转成 Path 对象；
 # .resolve()：转成绝对路径并处理 ..；
 # .parents[0]：当前脚本所在目录，即 evaluation；
-# .parents[1]：上一级目录，即 project_a。
+# .parents[1]：上一级目录，即仓库根目录。
 PROJECT_ROOT=Path(__file__).resolve().parents[1]
 
 # my_project/          # 项目根目录

@@ -144,7 +144,7 @@ duplicate_count
 来源命令：
 
 ```powershell
-cd C:\Users\ASUS\Desktop\agent-learningstage1\project_a
+cd <repo root>
 ..\.venv\Scripts\python.exe .\evaluation\harness\run_full_suite.py --report-dir .\evaluation\reports\baseline-2026-10-08
 ```
 
@@ -639,7 +639,7 @@ run_id 能贯穿多个 Tab
 ### 14.1 当前可运行
 
 ```powershell
-cd C:\Users\ASUS\Desktop\agent-learningstage1\project_a
+cd <repo root>
 
 ..\.venv\Scripts\python.exe .\evaluation\harness\run_full_suite.py --report-dir .\evaluation\reports\baseline-2026-10-08
 

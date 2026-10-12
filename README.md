@@ -208,7 +208,6 @@ REDIS_URL=redis://localhost:6380/0
 Start PostgreSQL and Redis:
 
 ```powershell
-cd project_a
 docker compose -f .\docker-compose.db.yml up -d
 ```
 
@@ -260,7 +259,6 @@ Invoke-RestMethod `
 Run the core retrieval suite:
 
 ```powershell
-cd project_a
 .\.venv\Scripts\python.exe .\evaluation\harness\run_full_suite.py --report-dir .\evaluation\reports\baseline-2026-10-08
 ```
 

@@ -7,7 +7,22 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-PROJECT_ROOT=Path(__file__).resolve().parents[3]
+# 兼容两种目录布局：
+#   仓库布局：runtime/db/config.py -> 仓库根（parents[2]）
+#   旧开发布局：<dev>/<project>/runtime/db/config.py -> <dev>（parents[3]，.env 在 <dev> 下）
+_ENV_CANDIDATES=(
+    Path(__file__).resolve().parents[2],
+    Path(__file__).resolve().parents[3],
+)
+
+PROJECT_ROOT=next(
+    (
+        candidate
+        for candidate in _ENV_CANDIDATES
+        if (candidate / ".env").exists()
+    ),
+    _ENV_CANDIDATES[0],
+)
 
 load_dotenv(PROJECT_ROOT / ".env")
 

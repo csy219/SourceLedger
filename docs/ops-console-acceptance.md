@@ -91,8 +91,8 @@ dist/assets/index-DUG5OGt4.js
 ## 6. 截图
 
 ```text
-project_a/docs/ops-console-desktop.png
-project_a/docs/ops-console-mobile.png
+docs/ops-console-desktop.png
+docs/ops-console-mobile.png
 ```
 
 ## 7. 页面能力

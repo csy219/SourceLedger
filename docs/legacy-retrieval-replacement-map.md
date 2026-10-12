@@ -11,7 +11,7 @@
 旧向量检索核心集中在一个模块：
 
 ```text
-project_a\pdf_rag.py
+pdf_rag.py
 ```
 
 它同时承担了四类职责：
@@ -47,7 +47,7 @@ agent.py -> pdf_rag.search_knowledge
 文件：
 
 ```text
-project_a\pdf_rag.py
+pdf_rag.py
 ```
 
 ### 2.1 常量
@@ -98,7 +98,7 @@ space=cosine
 文件：
 
 ```text
-project_a\agent.py
+agent.py
 ```
 
 导入：
@@ -157,7 +157,7 @@ P0
 文件：
 
 ```text
-project_a\runtime\api\S19_3_documents.py
+runtime\api\S19_3_documents.py
 ```
 
 导入：
@@ -194,7 +194,7 @@ P0
 文件：
 
 ```text
-project_a\app.py
+app.py
 ```
 
 导入：
@@ -234,7 +234,7 @@ POST /ask
 runtime.api.S19_2_app:app
 ```
 
-因此 `project_a\app.py` 应视为旧版旁路入口，不参与后续主链路升级。
+因此 `app.py` 应视为旧版旁路入口，不参与后续主链路升级。
 
 ---
 

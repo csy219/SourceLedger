@@ -11,7 +11,16 @@ from pydantic import BaseModel, Field, ValidationError
 
 from S08_2_tokenizer import tokenize
 
-ENV_FILE = Path(__file__).resolve().parents[2] / ".env"
+# 兼容两种目录布局：仓库布局的 .env 在仓库根，旧的开发布局在项目父目录
+_ENV_CANDIDATES = (
+    Path(__file__).resolve().parents[1] / ".env",
+    Path(__file__).resolve().parents[2] / ".env",
+)
+
+ENV_FILE = next(
+    (p for p in _ENV_CANDIDATES if p.exists()),
+    _ENV_CANDIDATES[0],
+)
 
 CHINESE_STOP_CHARS = set(
     "的了吗呢哪什么怎如何是否几有和与或"

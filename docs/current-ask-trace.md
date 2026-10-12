@@ -582,7 +582,7 @@ BAAI/bge-small-zh-v1.5
 
 ```text
 Chroma PersistentClient
-path=project_a\chroma_db
+path=chroma_db
 collection=docs
 ```
 

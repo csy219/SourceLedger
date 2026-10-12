@@ -8,25 +8,13 @@
 
 ## 1. 结论
 
-当前 SourceLedger 的真实源码仍在：
+项目源码就是本仓库根目录。
 
 ```text
-C:\Users\ASUS\Desktop\agent-learningstage1\project_a
+<repo root>/
 ```
 
-当前计划、记录和后续基线文档位于：
-
-```text
-C:\Users\ASUS\Documents\ChatGPT\SourceLedge 的无敌优化
-```
-
-当前虚拟环境和项目根环境文件位于：
-
-```text
-C:\Users\ASUS\Desktop\agent-learningstage1\.venv
-C:\Users\ASUS\Desktop\agent-learningstage1\.env
-C:\Users\ASUS\Desktop\agent-learningstage1\.env.example
-```
+虚拟环境位于仓库根目录的 `.venv`；环境变量模板为仓库根目录的 `.env.example`，复制为 `.env` 后填写。
 
 启动顺序必须是：
 
@@ -46,23 +34,23 @@ Docker Desktop
 
 | 资产 | 路径 |
 | --- | --- |
-| 项目源码 | `C:\Users\ASUS\Desktop\agent-learningstage1\project_a` |
-| API 入口 | `project_a\runtime\api\S19_2_app.py` |
-| 业务路由 | `project_a\runtime\api\S19_4_routes.py` |
-| 旧 RAG 实现 | `project_a\pdf_rag.py` |
-| 当前 Agent 实现 | `project_a\agent.py` |
-| 前端 | `project_a\frontend` |
-| 数据库迁移 | `project_a\runtime\db\migrations` |
-| 韧性配置 | `project_a\configs\resilience.json` |
+| 项目源码 | `<repo root>` |
+| API 入口 | `runtime\api\S19_2_app.py` |
+| 业务路由 | `runtime\api\S19_4_routes.py` |
+| 旧 RAG 实现 | `pdf_rag.py` |
+| 当前 Agent 实现 | `agent.py` |
+| 前端 | `frontend` |
+| 数据库迁移 | `runtime\db\migrations` |
+| 韧性配置 | `configs\resilience.json` |
 
 ### 2.2 数据
 
 | 资产 | 路径 |
 | --- | --- |
-| 上传目录 | `project_a\uploads` |
-| Chroma 向量库 | `project_a\chroma_db` |
-| 评测语料 | `project_a\evaluation\corpus` |
-| 评测报告 | `project_a\evaluation\reports` |
+| 上传目录 | `uploads` |
+| Chroma 向量库 | `chroma_db` |
+| 评测语料 | `evaluation\corpus` |
+| 评测报告 | `evaluation\reports` |
 
 当前 `uploads` 中可见：
 
@@ -86,7 +74,7 @@ AI应用开发知识手册.pdf
 
 ```text
 Python: 3.13.9
-虚拟环境: C:\Users\ASUS\Desktop\agent-learningstage1\.venv
+虚拟环境: <repo root>\.venv
 ```
 
 虚拟环境中存在：
@@ -161,7 +149,7 @@ failed to connect to the docker API
 ### 4.2 启动 PostgreSQL 和 Redis
 
 ```powershell
-cd C:\Users\ASUS\Desktop\agent-learningstage1\project_a
+cd <repo root>
 docker compose -f .\docker-compose.db.yml up -d
 ```
 
@@ -194,25 +182,24 @@ PONG
 
 ### 4.3 应用数据库迁移
 
-从 `project_a` 目录执行：
+从仓库根目录执行：
 
 ```powershell
-cd C:\Users\ASUS\Desktop\agent-learningstage1\project_a
-..\.venv\Scripts\alembic.exe upgrade head
+cd <repo root>
+.\.venv\Scripts\alembic.exe upgrade head
 ```
 
 注意：
 
-虚拟环境在 `project_a` 的父目录，因此这里必须使用 `..\.venv`。  
-现有 README 中从 `project_a` 使用 `.\.venv\Scripts\...` 的命令是不准确的。
+虚拟环境位于仓库根目录的 `.venv`，因此从仓库根执行 `.\.venv\Scripts\...`。
 
 ### 4.4 启动 FastAPI
 
-从 `project_a` 目录执行：
+从仓库根目录执行：
 
 ```powershell
-cd C:\Users\ASUS\Desktop\agent-learningstage1\project_a
-..\.venv\Scripts\python.exe -m uvicorn runtime.api.S19_2_app:app --host 127.0.0.1 --port 8000
+cd <repo root>
+.\.venv\Scripts\python.exe -m uvicorn runtime.api.S19_2_app:app --host 127.0.0.1 --port 8000
 ```
 
 第一次启动需要加载 SentenceTransformer 和向量依赖，耗时明显高于后续启动。
@@ -244,7 +231,7 @@ redis=True
 打开第二个 PowerShell：
 
 ```powershell
-cd C:\Users\ASUS\Desktop\agent-learningstage1\project_a\frontend
+cd frontend
 npm.cmd install
 npm.cmd run dev
 ```
@@ -315,7 +302,7 @@ BAAI/bge-small-zh-v1.5
 当前报告目录存在：
 
 ```text
-project_a\evaluation\reports
+evaluation\reports
 ```
 
 主要报告：
@@ -345,27 +332,10 @@ S19_6_load_test.json
 
 ## 7. 已知问题
 
-### 7.1 README 的启动命令路径错误
+### 7.1 已修复：启动命令路径
 
-README 在 `cd project_a` 后仍使用：
-
-```text
-.\.venv\Scripts\...
-```
-
-但虚拟环境真实位置在父目录：
-
-```text
-C:\Users\ASUS\Desktop\agent-learningstage1\.venv
-```
-
-正确方式是从 `project_a` 使用：
-
-```text
-..\.venv\Scripts\...
-```
-
-或者先激活父目录中的虚拟环境。
+早期版本 README 在切入子目录后使用 `.\.venv\Scripts\...`，与实际虚拟环境位置不符。
+现已统一为：从仓库根目录执行命令，虚拟环境位于仓库根目录的 `.venv`。
 
 ### 7.2 Docker Desktop 未运行
 

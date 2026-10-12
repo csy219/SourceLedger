@@ -11,7 +11,7 @@
 所有本次评测报告统一位于：
 
 ```text
-C:\Users\ASUS\Desktop\agent-learningstage1\project_a\evaluation\reports\baseline-2026-10-08
+evaluation\reports\baseline-2026-10-08
 ```
 
 包含：
@@ -241,7 +241,7 @@ fake_ask = true
 ### 9.1 完整检索套件
 
 ```powershell
-cd C:\Users\ASUS\Desktop\agent-learningstage1\project_a
+cd <repo root>
 ..\.venv\Scripts\python.exe .\evaluation\harness\run_full_suite.py --report-dir .\evaluation\reports\baseline-2026-10-08
 ```
 
